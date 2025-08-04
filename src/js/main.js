@@ -122,6 +122,8 @@ function getData(e) {
         const repaymentInterest = Array.from(radios).find(r => r.checked);
         figure.style.display = "none";
         showResults.style.display = "block";
+        figure.setAttribute("aria-hidden", "true");
+        showResults.setAttribute("aria-hidden", "false");
 
         const result = getResults(parseFloat(amount.value.trim()), parseFloat(interest.value.trim()), parseInt(years.value.trim()), repaymentInterest.id);
         monthlyShow.textContent = `£${result.monthly.toFixed(2)}`;
@@ -156,6 +158,8 @@ function clearAll() {
     totalShow.textContent = `£0`;
     figure.style.display = "flex";
     showResults.style.display = "none";
+    figure.setAttribute("aria-hidden", "false");
+    showResults.setAttribute("aria-hidden", "true");
 }
 
 

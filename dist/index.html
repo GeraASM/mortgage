@@ -8,8 +8,8 @@
     <title>Frontend Mentor | Mortgage repayment calculator</title>
 
 
-  <script type="module" crossorigin src="/assets/index-Cu5wsEQh.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/index-DLkiOnt8.css">
+  <script type="module" crossorigin src="/assets/index-93VqU-xw.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-7l_hRRg2.css">
 </head>
 <body>
     <main>
@@ -17,9 +17,9 @@
             <section class="mortgage-content">
                 <header class="mortgage__header">
                     <h1 class="mortgage__title text-preset-2">Mortgage Calculator</h1>
-                    <a id="btnClear" href="#" class="mortgage__clear text-present-4">Clear All</a>
+                    <a id="btnClear" href="/" class="mortgage__clear text-present-4">Clear All</a>
                 </header>
-                <form id="form" action="/" class="mortgage__form">
+                <form id="form" action="/" class="mortgage__form" novalidate>
                     <div class="mortgage__block">
                         <label for="amount" class="mortgage__label">Mortgage Amount</label>
                         <div class="mortgage__storage">
@@ -76,7 +76,7 @@
             <section class="mortgage-result">
 
                 <!-- Remember use display: flex; -->
-                <figure class="mortgage__figure">
+                <figure class="mortgage__figure" aria-hidden="false">
                     <img src="/assets/illustration-empty-XWfWodfp.svg" alt="Empty">
                     <h3 class="mortgage__results text-preset-2">Results shown here</h3>
                     <p class="mortgage__complete text-preset-4">
@@ -84,7 +84,7 @@
                         your monthly repayments would be.
                     </p>
                 </figure>
-                <div style="display: none;" class="mortgage__show">
+                <div style="display: none;" class="mortgage__show" aria-hidden="true">
                     <div class="mortgage__your">
                         <h3 class="mortgage__results text-preset-2">Your results</h3>
                         <p class="mortgage__complete text-preset-4">

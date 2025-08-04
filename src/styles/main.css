@@ -342,6 +342,10 @@ main {
             overflow: hidden;
         }
 
+        .mortgage-content {
+            padding: 40px;
+        }
+
         .mortgage__header {
             display: flex;
             justify-content: space-between;
