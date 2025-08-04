@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="./src/styles/main.css" />    
+    <title>Frontend Mentor | Mortgage repayment calculator</title>
+
+
+</head>
+<body>
+    <main>
+        <section class="mortgage">
+            <section class="mortgage-content">
+                <header class="mortgage__header">
+                    <h1 class="mortgage__title text-preset-2">Mortgage Calculator</h1>
+                    <a id="btnClear" href="#" class="mortgage__clear text-present-4">Clear All</a>
+                </header>
+                <form id="form" action="/" class="mortgage__form">
+                    <div class="mortgage__block">
+                        <label for="amount" class="mortgage__label">Mortgage Amount</label>
+                        <div class="mortgage__storage">
+                            <svg class="mortgage__type" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-pound" viewBox="0 0 16 16">
+                                <path d="M4 8.585h1.969c.115.465.186.939.186 1.43 0 1.385-.736 2.496-2.075 2.771V14H12v-1.24H6.492v-.129c.825-.525 1.135-1.446 1.135-2.694 0-.465-.07-.913-.168-1.352h3.29v-.972H7.22c-.186-.723-.372-1.455-.372-2.247 0-1.274 1.047-2.066 2.58-2.066a5.3 5.3 0 0 1 2.103.465V2.456A5.6 5.6 0 0 0 9.348 2C6.865 2 5.322 3.291 5.322 5.366c0 .775.195 1.515.399 2.247H4z"/>
+                            </svg>
+                            <input type="text" class="mortgage__input" name="amount" id="amount">
+                        </div>
+                        <small class="error">This field is required</small>
+                    </div>
+                    <div class="mortgage__content">
+                        <div class="mortgage__block mortgage__blocky">
+                            <label for="term" class="mortgage__label">Mortgage Term</label>
+                            <div class="mortgage__storage">
+                                <input type="text" class="mortgage__input" name="term" id="term">
+                                <div class="mortgage__years">
+                                    <p class="mortgage__year text-preset-3">years</p>
+                                </div>
+                            </div>
+                            <small class="error">This field is required</small>
+                        </div>
+                        <div class="mortgage__block mortgage__blocky">
+                            <label for="rate" class="mortgage__label">Interest Rate</label>
+                            <div class="mortgage__storage">
+                                <input type="text" class="mortgage__input" name="rate" id="rate">
+                                <svg class="mortgage__type" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-percent" viewBox="0 0 16 16">
+                                    <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                                </svg>
+                            </div>
+                            <small class="error">This field is required</small>
+                        </div>
+                    </div>
+                    <!-- RADIOS -->
+                    <div class="mortgage__block">
+                        <p class="mortgage__label">Mortgage Type</p>
+                        <div class="mortgage__option">
+                            <input type="radio" name="interest" id="repayment" class="mortgage__radio">
+                            <label for="repayment" class="mortgage__name text-preset-3">Repayment</label>
+                        </div>
+                        <div class="mortgage__option">
+                            <input type="radio" name="interest" id="interest" class="mortgage__radio">
+                            <label for="interest" class="mortgage__name text-preset-3">Interest Only</label>
+                        </div>
+                        <small class="error">This field is required</small>
+                    </div>
+                    <button class="mortgage__calculate" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                            <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z"/>
+                        </svg>
+                        <p class="mortgage__name mortgage__name text-preset-3">Calculate Repayments</p>
+                    </button>
+                </form>
+            </section>
+            <section class="mortgage-result">
+
+                <!-- Remember use display: flex; -->
+                <figure class="mortgage__figure">
+                    <img src="./src/assets/images/illustration-empty.svg" alt="Empty">
+                    <h3 class="mortgage__results text-preset-2">Results shown here</h3>
+                    <p class="mortgage__complete text-preset-4">
+                        Complete the form and click “calculate repayments” to see what 
+                        your monthly repayments would be.
+                    </p>
+                </figure>
+                <div style="display: none;" class="mortgage__show">
+                    <div class="mortgage__your">
+                        <h3 class="mortgage__results text-preset-2">Your results</h3>
+                        <p class="mortgage__complete text-preset-4">
+                            Your results are shown below based on the information you provided. 
+  To adjust the results, edit the form and click “calculate repayments” again.
+                        </p>
+                    </div>
+                    <section class="mortgage__show-results">
+                        <div class="mortgage__monthly">
+                            <p class="mortgage__complete text-preset-4">Your monthly repayments</p>
+                            <h2 id="monthly" class="mortgage__month">£0</h2>
+                        </div>
+                        <div class="mortgage__total">
+                            <p class="mortgage__complete text-preset-4">Total you'll repay over the term</p>
+                            <h2 id="total" class="mortgage__total-repay text-preset-2">£0</h2>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script type="module" src="./src/js/main.js"></script>
+
+  <!-- Mortgage Calculator
+  Clear All
+
+  Mortgage Amount
+
+  Mortgage Term
+
+  Interest Rate
+
+  Mortgage Type
+  Repayment
+  Interest Only
+
+  Calculate Repayments -->
+
+  <!-- Empty results start -->
+
+  <!-- Results shown here
+
+  Complete the form and click “calculate repayments” to see what 
+  your monthly repayments would be. -->
+
+  <!-- Empty results end -->
+
+  <!-- Completed results start -->
+<!-- 
+  Your results
+
+  Your results are shown below based on the information you provided. 
+  To adjust the results, edit the form and click “calculate repayments” again.
+
+  Your monthly repayments
+
+  Total you'll repay over the term -->
+
+  <!-- Completed results end -->
+</body>
+</html>
